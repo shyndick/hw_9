@@ -67,10 +67,11 @@ const ToDoList = function() {
     this.edit = () => {
         const editButton = document.querySelectorAll('.button_edit');
         editButton.forEach((editButton) => {
-            editButton.addEventListener('click',(event) => {
+            editButton.addEventListener('click',() => {
                 let editParent = editButton.parentElement;
-                let span = editParent.querySelector('span');
-                console.log(span.event)
+                let span = editParent.querySelector('.span');
+                span.textContent = prompt(span.textContent)
+
             })
         })
 
